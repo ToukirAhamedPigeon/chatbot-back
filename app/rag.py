@@ -25,7 +25,8 @@ class BanglaRAG:
     def __init__(self):
         # Load SBERT embeddings model for Bengali sentence similarity
         self.embeddings = HuggingFaceEmbeddings(
-            model_name="l3cube-pune/bengali-sentence-similarity-sbert"
+            # model_name="l3cube-pune/bengali-sentence-similarity-sbert"
+            model_name="sentence-transformers/all-MiniLM-L6-v2"
         )
         # Build FAISS vectorstore from the FAQ documents immediately on initialization
         self.vectorstore = self._build_vectorstore()
